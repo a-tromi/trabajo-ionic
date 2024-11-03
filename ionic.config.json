@@ -1,0 +1,7 @@
+{
+  "name": "appCofradiaComic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
