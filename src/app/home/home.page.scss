@@ -1,27 +1,59 @@
-#container {
+ /* Estilos para el ion-list */
+ .custom-list {
+  background-color: #f0f8ff; /* Color de fondo azul claro */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.custom-list-header {
+  background-color: #007acc; /* Color de fondo azul oscuro */
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.custom-list-item {
+  background-color: #e0f7fa; /* Color de fondo celeste */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-list-item:hover {
+  background-color: #b2ebf2; /* Cambia el color al pasar el cursor */
+}
+
+/* Estilos para el ion-card */
+.custom-card {
+  background-color: #ebdcff; /* Fondo color amarillo claro */
+  border: 1px solid hsl(10, 100%, 50%); /* Borde color dorado */
+  border-radius: 30px;
+}
+
+.custom-card-header {
+  background-color: #ff5900; /* Fondo dorado */
+  color: black;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  font-weight: bold;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
+.custom-card-content {
+  color: #333;
   font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
 }
 
-#container a {
-  text-decoration: none;
+#user{
+  padding-top: 20px;
+}
+
+.shake-img {
+  animation: shake 3s ease-in-out infinite alternate;
+}
+
+@keyframes shake {
+  0% {rotate: 0deg;}
+  30% {rotate: 25deg;}
+  60% {rotate: -25deg;}
+  100% {rotate: 0deg;}
 }
