@@ -36,30 +36,34 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
 
-.cuerpo_page
+/* estilos globales*/ 
 
-{
-    ion-menu::part(container) {
-        border-radius: 0 20px 20px 0;
-      
-        box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
-      }
-    
-    height: 100%;
-    padding-top: 10%;
-}
-.logo {
-    max-width: 50%;
-    height: auto;
-    background-color: transparent;
+ion-app, ion-content {
+  --background: radial-gradient(circle, #911111 0%, rgb(7, 15, 165)   100%);
+  background-color: radial-gradient(circle, #b42a2a 0%, rgb(20, 15, 165)   100%);
 }
 
 ion-header {
-    --background: linear-gradient(to bottom, #151162, #2196f3); /* Fondo degradado para el header */
-    color: #ffffff; 
-    text-align: center;
-  }
-ion-content {
-    --background: linear-gradient(to bottom, #1b1586, #2196f3); /* Fondo degradado */
-    color: #ffffff; 
-  }
+  --background: transparent; /* Fondo transparente */
+  --ion-toolbar-background: transparent; /* Fondo transparente para la toolbar */
+  --ion-toolbar-border-color: transparent; /* Elimina el borde */
+}
+
+ion-header,
+ion-toolbar,
+ion-buttons,
+app-company-name {
+  color: rgb(67, 0, 139); /* Ajusta el color del texto o íconos a darkblue */
+}
+
+ion-header,
+ion-toolbar {
+--ion-toolbar-border-color: transparent; /* Quita el borde */
+--background: transparent;               /* Hace transparente la barra */ 
+}
+
+.header-md{
+-webkit-box-shadow: none !important; /* Elimina la sombra */
+box-shadow: none !important; /* Elimina la sombra */
+}
+

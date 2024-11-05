@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <app-company-name [companyName]="'Cofradia Cómics'"></app-company-name>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="mainMenu"></ion-menu-button>
+    </ion-buttons>  
+  </ion-toolbar>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Quienes Somos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Cofradia Cómics</ion-card-title>
+      <ion-card-subtitle>Quienes Somos</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <div>
+        <p>
+          Somos un grupo de amigos aficionados al Cómic que con el afán de ampliar nuestras colecciones comenzamos a encargar cómics a España y a venderlos a través de las RRSS 
+          con el fin de que las ganancias nos permitan ampliar nuestra colección personal.
+        </p>
+        <p>
+          Fue tal el éxito de las ventas que tuvimos que tomarnos este negocio en serio y actualmente competimos con las grandes tiendas físicas de nuestra País.
+        </p>
+        <img src="./assets/img/cofradia-comics-logo.png"/>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
