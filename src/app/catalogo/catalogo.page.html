@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <app-company-name [companyName]="'Cofradia Cómics'"></app-company-name>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="mainMenu"></ion-menu-button>
+    </ion-buttons>  
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">catalogo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Comics Recientes</ion-card-title>
+      <ion-card-subtitle>Cofradia Cómics</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <!-- Recorre el array de comics para mostrar cada comic en la lista -->
+        <ion-item *ngFor="let comic of comics" (click)="verDetalle(comic)" class="custom-list-item">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="{{comic.img}}" class="shake-img" />
+          </ion-thumbnail>
+          <ion-label>{{ comic.nombre }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

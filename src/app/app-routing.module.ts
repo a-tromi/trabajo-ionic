@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'quienes-somos',
     loadChildren: () => import('./quienes-somos/quienes-somos.module').then( m => m.QuienesSomosPageModule)
   },
+  {
+    path: 'catalogo',
+    loadChildren: () => import('./catalogo/catalogo.module').then( m => m.CatalogoPageModule)
+  },
+  {
+    path: 'detalle-comic',
+    loadChildren: () => import('./detalle-comic/detalle-comic.module').then( m => m.DetalleComicPageModule)
+  },
  
 ];
 
