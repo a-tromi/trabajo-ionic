@@ -1,0 +1,62 @@
+ion-content {
+    --background: none; /* Elimina cualquier fondo global */
+    background-image: url('../../assets/img/ww-fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  ion-card {
+    background-color: rgba(18, 5, 67, 0.5); /* Fondo semitransparente */
+    backdrop-filter: blur(5px); /* Opcional: agrega un efecto de desenfoque detrás */
+    box-shadow: none;
+    border-radius: 3%;
+    margin: 10%  auto;
+    width: 99%; 
+  }
+  .title_tab h2 {
+    text-align: center;
+    color: hsl(244, 83%, 34%);
+  }
+
+  ion-card ion-item {
+    --background: transparent; /* Fondo transparente */
+    color: rgba(18, 5, 67, 0.819); /* Color de texto en naranja oscuro */
+  }
+  
+  ion-card-header {
+    padding: 0;
+    text-align: center;
+  }
+  
+  .custom-list-item {
+    background-color: #094f58; /* Color de los marcos */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-list-item:hover {
+    background-color: hsl(138, 53%, 25%); /* Cambia el color el marco al pinchar un marco  */
+  }
+  
+  .custom-card-content {
+    color: #540845;
+    font-size: 16px;
+  }
+  
+  #user{
+    padding-top: 20px;
+  }
+  
+  .shake-img {
+    animation: shake 7s ease-in-out infinite alternate;
+  }
+  
+  @keyframes shake {
+    0% {rotate: 0deg;}
+    30% {rotate: 25deg;}
+    60% {rotate: -25deg;}
+    100% {rotate: 0deg;}
+  }

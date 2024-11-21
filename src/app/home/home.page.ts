@@ -12,7 +12,7 @@ export class HomePage {
 
    // Array de cómics
    comics = [
-    { nombre: 'DCSOS: La Guerra de Los Dioses', img: './assets/img/LaGuerraDeLosDiosesNoMuertos.jpg', enStock: false },
+    { nombre: 'DCSOS: La Guerra de Los Dioses', img: './assets/img/catalogo/LaGuerraDeLosDiosesNoMuertos.jpg', enStock: false },
     { nombre: 'Batman y Robin: El Amanacer de DC', img: './assets/img/BatmanyRobin_1_ElAmanecerdeDC.jpg', enStock: true },
     { nombre: 'El Pingüino núm. 1', img: './assets/img/ElPinguino_1.jpg', enStock: false},
     { nombre: 'El Pingüino núm. 2',img: './assets/img/ElPinguino_2.jpg', enStock: false }
@@ -24,7 +24,7 @@ export class HomePage {
   bienvenida: string='Bienvenid@ Comiquer@';
 
   ngOnInit() {
-    this.menu.close("mainMenu");
+    this.menu.close("mainMenu"); // Esto hace que se cierre el toolbar cada vez que pincho Home
     // Obtener los parámetros de la URL
     this.route.queryParams.subscribe(params => {
       this.email = params['email'];     

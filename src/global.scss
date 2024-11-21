@@ -38,10 +38,14 @@
 
 /* estilos globales*/ 
 
+/* estilos globales*/ 
+
 ion-app, ion-content {
-  --background: radial-gradient(circle, #911111 0%, rgb(7, 15, 165)   100%);
-  background-color: radial-gradient(circle, #b42a2a 0%, rgb(20, 15, 165)   100%);
+  --background: url('../src/assets/img/fondo-liga.jpeg') no-repeat center center / cover;
+
+  background-color: radial-gradient(circle, #28368b 0%, cornflowerblue 100%);
 }
+
 
 ion-header {
   --background: transparent; /* Fondo transparente */
@@ -53,8 +57,9 @@ ion-header,
 ion-toolbar,
 ion-buttons,
 app-company-name {
-  color: rgb(67, 0, 139); /* Ajusta el color del texto o íconos a darkblue */
+  color: rgb(245, 59, 46); /* Ajusta el color de las etiquetas, textos o íconos del toolbar */
 }
+
 
 ion-header,
 ion-toolbar {
@@ -63,7 +68,8 @@ ion-toolbar {
 }
 
 .header-md{
--webkit-box-shadow: none !important; /* Elimina la sombra */
-box-shadow: none !important; /* Elimina la sombra */
+  -webkit-box-shadow: none !important; /* Elimina la sombra */
+  box-shadow: none !important; /* Elimina la sombra */
 }
+
 

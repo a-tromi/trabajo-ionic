@@ -1,11 +1,17 @@
 .company-content{
-    display: flex; 
-    align-items: center;
+  display: flex; 
+  align-items: center;
+}
+
+.company-content img {
+  width: 20%;
+  position: absolute;
+  margin-left: 0%;
 }
 .company-icon{
-    margin-right: 6px;
-} 
-
+  margin-right: 19px;
+}
 .company-content span{
-  color:rgb(239, 212, 7);
-} 
+  color: darkorange;
+}
+

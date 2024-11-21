@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <app-company-name [companyName]="'Cofradia Cómics'"></app-company-name>
-    <ion-buttons slot="start">
+    <ion-buttons slot="end">
       <ion-menu-button menu="mainMenu"></ion-menu-button>
     </ion-buttons>  
   </ion-toolbar>
@@ -9,15 +9,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">catalogo</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="title_tab">
+    <h2>SúperCatálogo</h2>
+  </div>
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Comics Recientes</ion-card-title>
+      <ion-card-title>Cómics Recientes</ion-card-title>
       <ion-card-subtitle>Cofradia Cómics</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>

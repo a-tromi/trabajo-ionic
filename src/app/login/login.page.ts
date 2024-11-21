@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+
   email: string = '';
   password: string = '';
 
@@ -15,6 +17,7 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
+
 
    // Método para mostrar alerta de error
    async mostrarAlerta(mensaje: string) {
@@ -58,6 +61,8 @@ export class LoginPage implements OnInit {
     return;
   }
 
+
+
   // Si todas las validaciones son correctas, navega a la página "home"
   this.navCtrl.navigateForward(['/home'], {
     queryParams: {
@@ -65,6 +70,12 @@ export class LoginPage implements OnInit {
       password: this.password
     }
   });
+  
 }
-} 
 
+registro()
+{
+  this.navCtrl.navigateForward(['/registro']);
+}
+
+}
