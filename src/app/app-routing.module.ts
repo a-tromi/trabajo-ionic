@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'detalle-comic',
     loadChildren: () => import('./detalle-comic/detalle-comic.module').then( m => m.DetalleComicPageModule)
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
  
 ];
 

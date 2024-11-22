@@ -35,6 +35,7 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 /* estilos globales*/ 
 
@@ -57,7 +58,7 @@ ion-header,
 ion-toolbar,
 ion-buttons,
 app-company-name {
-  color: rgb(245, 59, 46); /* Ajusta el color de las etiquetas, textos o íconos del toolbar */
+  color: rgb(50, 133, 235); /* Ajusta el color de las etiquetas, textos o íconos del toolbar */
 }
 
 
