@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { MenuController } from '@ionic/angular'; 
-import { Router } from '@angular/router'
+import { MenuController } from '@ionic/angular'; // esto permite manejar la parte lógica del menú
+import { Router } from '@angular/router' // esto me permite llamar a otras páginas
 
 
 @Component({
@@ -13,7 +13,7 @@ export class AppComponent {
 
   cerrarSesion() {
     console.log('Sesión cerrada');
-    this.menu.close('mainMenu'); // Cierra el menú
+    this.menu.close('mainMenu'); // Esto cierra el menú
     this.router.navigate(['/login']);
   }
 }

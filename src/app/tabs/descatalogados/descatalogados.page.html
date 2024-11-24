@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+        
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="title_tab">
+    <h2>Cómics Descatalogados</h2>
+  </div>
+
+  <ion-list class="transparent-list">
+    <ion-item *ngFor="let descatalogados of descatalogados">
+      <ion-label>
+        <h2>{{ descatalogados.nombre }}</h2>
+        <p>Precio: {{ descatalogados.precio  }}</p>
+      </ion-label>
+      <div class="content_img">
+        <img [src]="descatalogados.imagen" alt="{{ descatalogados.nombre }}" class="descatalogados-image"/>
+      </div>
+    </ion-item>
+  </ion-list>
+
+
+

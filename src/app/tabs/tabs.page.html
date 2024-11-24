@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  <app-company-name [companyName]="'CofradiaComic'"></app-company-name>
+  
+  <ion-buttons slot="end">
+    <ion-menu-button menu="mainMenu"></ion-menu-button>
+  </ion-buttons>  
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="descatalogados">
+        <ion-icon name="basket-outline"></ion-icon>
+        <ion-label>Descatalogados</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="figuras">
+        <ion-icon name="body"></ion-icon>
+        <ion-label>Figuras</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="galeria">
+        <ion-icon name="images-outline"></ion-icon>
+        <ion-label>Galeria</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+  
+</ion-content>

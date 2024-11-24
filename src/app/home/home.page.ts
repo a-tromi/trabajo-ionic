@@ -21,11 +21,11 @@ export class HomePage {
   constructor(private route: ActivatedRoute, private alertController: AlertController, private menu: MenuController) {}
   email: string = '';
 
-  bienvenida: string='Bienvenid@ Comiquer@';
+  bienvenida: string='Bienvenid@ Comiquer@'; // variable que interpolamos en el HTML
 
   ngOnInit() {
     this.menu.close("mainMenu"); // Esto hace que se cierre el toolbar cada vez que pincho Home
-    // Obtener los parámetros de la URL
+    // El ActiveRoute permite Obtener los parámetros de la URL
     this.route.queryParams.subscribe(params => {
       this.email = params['email'];     
     });

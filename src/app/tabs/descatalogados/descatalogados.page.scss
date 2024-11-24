@@ -1,0 +1,42 @@
+ion-content {
+    --background: none; /* Elimina cualquier fondo global */
+    background-image: url('../../../assets/img/green-lantern-fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.transparent-list {
+    background: transparent;
+  }
+
+ ion-item {
+    --background: transparent; /* Fondo transparente */
+    color: hsl(70, 90%, 49%); /* Color de texto en naranja oscuro */
+  }
+  
+ 
+  
+  ion-label h2 {
+    font-size: 1.6em; // tamaño letra
+    color: hwb(194 3% 0%);
+    margin: 0;
+  }
+  
+  ion-label p {
+    font-size: 1.2em; // tamaño precio
+    color: hwb(133 15% 9%);
+    margin: 5px 0 0;
+  }
+
+  .content_img{
+    width: 94px; // tamaño de imagen
+  }
+  
+  .product-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 500px;
+    margin-left: auto;
+  }
+
