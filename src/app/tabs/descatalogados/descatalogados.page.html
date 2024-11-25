@@ -14,7 +14,7 @@
     <ion-item *ngFor="let descatalogados of descatalogados">
       <ion-label>
         <h2>{{ descatalogados.nombre }}</h2>
-        <p>Precio: {{ descatalogados.precio  }}</p>
+        <p>Precio: {{ descatalogados.precio | convertirMoneda:977  }}</p>
       </ion-label>
       <div class="content_img">
         <img [src]="descatalogados.imagen" alt="{{ descatalogados.nombre }}" class="descatalogados-image"/>

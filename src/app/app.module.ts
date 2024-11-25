@@ -9,10 +9,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Importa BrowserAnimationsModule
 
+import { SQLite } from '@awesome-cordova-plugins/sqlite/ngx';
+
+
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, BrowserAnimationsModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  declarations: [AppComponent ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,  BrowserAnimationsModule],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },SQLite ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

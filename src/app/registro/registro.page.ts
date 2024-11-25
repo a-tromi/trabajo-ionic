@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { FormatearFechaPipe } from '../pipes/formatear-fecha.pipe';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-registro',
@@ -18,8 +19,9 @@ export class RegistroPage implements OnInit {
   password: any='';
   selectedOption: any='';
   selectedDate: any='';
+  registroStatus: string='';
   
-  constructor(private menu: MenuController, private alertController: AlertController, private formatearFechaPipe: FormatearFechaPipe) { }
+  constructor(private menu: MenuController, private alertController: AlertController, private formatearFechaPipe: FormatearFechaPipe, private dataService: DataService) { }
 
   ngOnInit() {
     this.menu.close("mainMenu"); // Esto hace que se cierre el toolbar cada vez que pincho "Registro"
@@ -36,6 +38,7 @@ export class RegistroPage implements OnInit {
     await alert.present();
   }
 
+  /*
   guardar() {
 
     const fechaFormateada = this.formatearFechaPipe.transform(this.selectedDate);
@@ -47,4 +50,31 @@ export class RegistroPage implements OnInit {
     }
     
   }
+  */
+
+  guardar() {
+    if (this.nombre.trim() === '' || this.apellido.trim() === || this.usuario.trim() === || this.password.trim() === || this.selectedOption() === || this.selectedDate) {
+      this.presentAlert('Error: nombre y apellido vacios');
+    } else {
+  
+      //this.presentAlert('Datos Correctos  usuario:  '+this.nombre+' fecha nacimiento: '+this.selectedDate); 
+      this.register() 
+    }
+  }
+
+  // Función  que registra datos validados
+  async register() {
+    const success = await this.dataService.registerUser(
+      this.nombre,
+      this.apellido,
+      this.usuario,
+      this.password,
+      this.selectedOption,
+      this.selectedDate
+    );
+    this.registroStatus = success ? 'Registro exitoso' : 'Error al registrar';
+    this.presentAlert(this.registroStatus);
+
+  }
+  
 }

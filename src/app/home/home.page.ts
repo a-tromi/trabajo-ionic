@@ -42,4 +42,10 @@ export class HomePage {
     await alert.present();
   }
 
+  openWhatsApp() {
+    const phoneNumber = "1234567890"; // aqui reemplazamos el numero de wsp
+    const url = `https://wa.me/${phoneNumber}`;
+    window.open(url, '_blank'); // esto abre wsp 
+  } 
+
 }

@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { DescatalogadosPageRoutingModule } from './descatalogados-routing.module';
 
 import { DescatalogadosPage } from './descatalogados.page';
+import { ConvertirMonedaPipe } from 'src/app/pipes/convertir-moneda.pipe';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { DescatalogadosPage } from './descatalogados.page';
     IonicModule,
     DescatalogadosPageRoutingModule
   ],
-  declarations: [DescatalogadosPage]
+  declarations: [DescatalogadosPage, ConvertirMonedaPipe]
 })
 export class DescatalogadosPageModule {}

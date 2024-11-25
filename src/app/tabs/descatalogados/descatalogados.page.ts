@@ -19,7 +19,7 @@ export class DescatalogadosPage implements OnInit {
 
     {
       nombre: 'Clasicos Marvel DC, Grandes Crossover del cómic',
-      precio: 30.5,
+      precio: 60.5,
       imagen: '/assets/img/catalogo/clasicos-marvel-dc.jpg'
     },
 
@@ -37,7 +37,7 @@ export class DescatalogadosPage implements OnInit {
 
     {
       nombre: 'Superman, Las historias de Alan Moore',
-      precio: 90.5,
+      precio: 41,
       imagen: '/assets/img/catalogo/superman-de-alan-moore.jpg'
     },
 
