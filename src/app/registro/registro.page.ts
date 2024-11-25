@@ -53,7 +53,7 @@ export class RegistroPage implements OnInit {
   */
 
   guardar() {
-    if (this.nombre.trim() === '' || this.apellido.trim() === || this.usuario.trim() === || this.password.trim() === || this.selectedOption() === || this.selectedDate) {
+    if (this.nombre.trim() === '' || this.apellido.trim() === '') {
       this.presentAlert('Error: nombre y apellido vacios');
     } else {
   

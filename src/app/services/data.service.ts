@@ -8,12 +8,14 @@ export class DataService {
 
   public dbInstance!: SQLiteObject; 
 
-  constructor(private sqlite: SQLite) { }
+  constructor(private sqlite: SQLite) {
+    this.initializeDatabase();
+   }
 
 // Función para inicializar BD
   async initializeDatabase() {
     this.dbInstance = await this.sqlite.create({
-      name: 'cofradia.db',
+      name: 'CofradiaComic.db',
       location: 'default',
     });
  

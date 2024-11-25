@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
+import { DataService } from '../services/data.service';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class LoginPage implements OnInit {
   email: string = '';
   password: string = '';
 
-  constructor(private navCtrl: NavController, private alertController: AlertController) { }
+  constructor(private navCtrl: NavController, private alertController: AlertController, private dataService: DataService) { }
 
   ngOnInit() {
   }
@@ -36,7 +37,7 @@ export class LoginPage implements OnInit {
     return emailRegex.test(email);
   }
 
-  login() {
+   async login() {
    // Verificar que el campo de correo no esté vacío
    if (!this.email) {
     this.mostrarAlerta('El campo de correo no puede estar vacío.');
@@ -55,15 +56,16 @@ export class LoginPage implements OnInit {
     return;
   }
 
-  // Verificar que la contraseña tenga máximo 4 caracteres
+  // Verifica contraseña con un máximo 4 caracteres
   if (this.password.length > 4) {
     this.mostrarAlerta('La contraseña no puede tener más de 4 caracteres.');
     return;
   }
 
 
+/*
 
-  // Si todas las validaciones son correctas, navega a la página "home"
+  // Si las validaciones están correctas se podra navegar "
   this.navCtrl.navigateForward(['/home'], {
     queryParams: {
       email: this.email,
@@ -72,10 +74,32 @@ export class LoginPage implements OnInit {
   });
   
 }
+*/
 
-registro()
+  // constante para validar credenciales con un servicio de autenticación
+
+  const isAuthenticated = await this.dataService.loginUser(this.email, this.password);
+
+    
+  if (isAuthenticated) {
+    // Si la autenticación es correcta, navega a la página "home"
+
+    // Guardar el nombre del usuario en Local Storage
+    localStorage.setItem('username', this.email );
+
+    this.navCtrl.navigateForward(['/home'], {
+      queryParams: {
+        email: this.email
+      }
+    });
+  } else {
+    // Muestra alerta si las credenciales son incorrectas
+    this.mostrarAlerta('Correo o contraseña incorrectos.');
+  }
+  }
+
+  registro()
 {
   this.navCtrl.navigateForward(['/registro']);
 }
-
 }
