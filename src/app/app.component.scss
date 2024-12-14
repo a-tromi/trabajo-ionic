@@ -9,11 +9,15 @@ background-color: transparent;
 }
 
 ion-item ion-icon { 
-    color: #52ffe4;
+    color: #52ffe4;    
+}
+
+ion-item ion-label {
+    color:hsl(74, 100%, 66%)
 }
 
 ion-header,
 ion-toolbar{
     background-color: transparent;
-    color: white;
+    color: rgb(29, 30, 30);
 }

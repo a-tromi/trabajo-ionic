@@ -6,3 +6,11 @@ ion-card {
     margin: 10%  auto;
     width: 99%; // ancho del ion-card
   }
+
+  ion-card-header ion-card-title {
+    color: #52ffe4;
+  }
+
+  ion-card-header ion-card-subtitle {
+    color: #84e340;
+  }

@@ -7,7 +7,7 @@ ion-content {
   }
 
   ion-card {
-    background-color: rgba(18, 5, 67, 0.5); /* Fondo semitransparente */
+    background-color: rgba(30, 37, 36, 0.5); /* Fondo semitransparente */
     backdrop-filter: blur(5px); /* Opcional: agrega un efecto de desenfoque detrás */
     box-shadow: none;
     border-radius: 3%;
@@ -16,12 +16,12 @@ ion-content {
   }
   .title_tab h2 {
     text-align: center;
-    color: hsl(244, 83%, 34%);
+    color: rgb(41, 76, 174);
   }
 
   ion-card ion-item {
     --background: transparent; /* Fondo transparente */
-    color: rgba(18, 5, 67, 0.819); /* Color de texto en naranja oscuro */
+    color: rgba(116, 211, 22, 0.819); /* Color de texto en naranja oscuro */
   }
   
   ion-card-header {
@@ -30,7 +30,7 @@ ion-content {
   }
   
   .custom-list-item {
-    background-color: #094f58; /* Color de los marcos */
+    background-color: hsl(187, 79%, 20%); /* Color de los marcos */
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 10px;
@@ -38,11 +38,11 @@ ion-content {
   }
   
   .custom-list-item:hover {
-    background-color: hsl(138, 53%, 25%); /* Cambia el color el marco al pinchar un marco  */
+    background-color: hwb(175 12% 62%); /* Cambia el color el marco al pinchar un marco  */
   }
   
   .custom-card-content {
-    color: #540845;
+    color: #aad50e;
     font-size: 16px;
   }
   
