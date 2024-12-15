@@ -6,6 +6,11 @@ ion-content {
     background-size: cover;
   }
 
+  ion-header ion-toolbar {
+    --background: transparent;
+    background-color: transparent;
+  }
+
   ion-card {
     background-color: rgba(30, 37, 36, 0.5); /* Fondo semitransparente */
     backdrop-filter: blur(5px); /* Opcional: agrega un efecto de desenfoque detrás */

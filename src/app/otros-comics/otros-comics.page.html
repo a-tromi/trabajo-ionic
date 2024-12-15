@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Otros-Cómics</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button menu="mainMenu"></ion-menu-button>
+    </ion-buttons> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-item *ngFor="let comic of comics">
+      <ion-label>
+        <h2>{{ comic.title }}</h2>
+        <p>TBD</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

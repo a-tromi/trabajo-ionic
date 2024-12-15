@@ -2,6 +2,11 @@ ion-list {
     --background: transparent; /* Fondo transparente para el listado */
     background-color: transparent;
   }
+
+  ion-menu {
+    --background: transparent; /* Fondo transparente para cada ítem */
+    background-color: transparent;
+  }
   
 ion-item {
 --background: transparent; /* Fondo transparente para cada ítem */

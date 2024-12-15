@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'map',
     loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
   },
+  {
+    path: 'otros-comics',
+    loadChildren: () => import('./otros-comics/otros-comics.module').then( m => m.OtrosComicsPageModule)
+  },
    
 ];
 
