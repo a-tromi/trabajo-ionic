@@ -28,36 +28,10 @@ export class RegistroPage implements OnInit {
     
   }
 
-  async presentAlert(message: string) {
-    const alert = await this.alertController.create({
-      header: 'Mensaje',
-      message: message,
-      buttons: ['OK']
-    });
-
-    await alert.present();
-  }
-
-  /*
-  guardar() {
-
-    const fechaFormateada = this.formatearFechaPipe.transform(this.selectedDate);
-
-    if (this.nombre.trim() === '' || this.apellido.trim() === '') {
-      this.presentAlert('Error: nombre y apellido vacios');
-    } else {
-      this.presentAlert('Datos Correctos  usuario:  '+this.nombre+' fecha nacimiento: '+fechaFormateada); 
-    }
-    
-  }
-  */
-
   guardar() {
     if (this.nombre.trim() === '' || this.apellido.trim() === '') {
       this.presentAlert('Error: nombre y apellido vacios');
     } else {
-  
-      //this.presentAlert('Datos Correctos  usuario:  '+this.nombre+' fecha nacimiento: '+this.selectedDate); 
       this.register() 
     }
   }
@@ -75,6 +49,16 @@ export class RegistroPage implements OnInit {
     this.registroStatus = success ? 'Registro exitoso' : 'Error al registrar';
     this.presentAlert(this.registroStatus);
 
+  }
+
+  async presentAlert(message: string) {
+    const alert = await this.alertController.create({
+      header: 'Mensaje',
+      message: message,
+      buttons: ['OK']
+    });
+
+    await alert.present();
   }
   
 }

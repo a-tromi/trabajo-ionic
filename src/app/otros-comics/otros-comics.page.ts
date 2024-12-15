@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { OtrosComicsPageModule } from './otros-comics.module';
 import { MenuController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-otros-comics',
@@ -12,20 +12,17 @@ export class OtrosComicsPage implements OnInit {
 
   comics: any[] = [];
 
-  constructor(private otrosComicsPageModule: OtrosComicsPageModule, private menu: MenuController, 
-    private alertController: AlertController) { 
-
-    }
+  constructor(private apiService: ApiService, private menu: MenuController, private alertController: AlertController) { }
 
   ngOnInit() {
 
     this.menu.close("mainMenu");
-    this.otrosComicsPageModule.getComics().subscribe(
+    this.apiService.getComics().subscribe(
       (response) => {
-        this.comics = response.data.results;
+        this.comics = response.data.results; //almacena los datos retornados por la API de marvel en la variable "comics"
       },
       (error) => {
-        this.mostrarAlerta(error);
+        this.mostrarAlerta(error); //los errores se manejan mostrandolos en un alert
       }
     );
   }
